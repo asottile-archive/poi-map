@@ -28,7 +28,7 @@ def get_config():
         return auto_namedtuple(**json.load(config))
 
 
-@functools.lru_cache(maxsize=128)
+@functools.lru_cache(maxsize=None)
 def geocode(location):
     loc = GoogleV3().geocode(location)
     if loc is None:
