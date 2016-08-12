@@ -1,0 +1,23 @@
+{
+    "origin": "Piazza Ognissanti, 3, 50123 Firenze",
+    "locations": [
+        ["Accademia di Bell Arti Firenze Florence, Italy", "museum"],
+        ["Basilica di San Lorenzo Florence, Italy", ""],
+        [
+            "Basilica di Santa Croche Florence, Italy",
+            "burial location of Michelangelo"
+        ],
+        [
+            "Piazza de' Pitti, 1, Firenze",
+            "Museum with excellent art collection"
+        ],
+        [
+            "Giardino di Boboli Florence, Italy",
+            "One of the most elegant gardens in Florence"
+        ]
+    ],
+    "gmaps_key": "...",
+    "host": "0.0.0.0",
+    "port": 5000,
+    "zoom": 15
+}

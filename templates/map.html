@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Point of interest map</title>
+    <style>{{ css }}</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-bar">
+            <ol>
+                {% for loc_desc in locations %}
+                    <li>
+                        <div><strong>{{ loc_desc.loc.name }}</strong></div>
+                        {{ loc_desc.desc }}
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="map-container"><div id="fullmap"></div></div>
+    </div>
+    <script>window.CONFIG = {{ js_globals | tojson }}; {{ js }}</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ key }}&amp;callback=initMap"></script>
+</body>
+</html>
