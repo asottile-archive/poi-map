@@ -3,7 +3,7 @@
         var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(location.lat, location.lng),
                 map: map,
-                label: (i + 1).toString(10)
+                label: window.CONFIG.labels[i + 1]
             }),
             infoWindow = new google.maps.InfoWindow({
                 content: location.name + ' - ' + location.desc,

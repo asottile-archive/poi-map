@@ -14,7 +14,21 @@
         [
             "Giardino di Boboli Florence, Italy",
             "One of the most elegant gardens in Florence"
-        ]
+        ],
+        [
+            "Via delle Porte Sante, 34, 50125 Firenze",
+            "Church at one of highest points in the city.  Romanesque architecture"
+        ],
+        [
+            "San Marco Firenze",
+            "Musuem  maybe – or just walk by to see 4:50"
+        ],
+        [
+            "Palazzo Medici Riccardi Firenze",
+            "renowned for stone masonry:  Renaissance"
+        ],
+        ["Santa Trinita Firenze", ""],
+        ["Palazzo Strozzi Firenze", ""]
     ],
     "gmaps_key": "...",
     "host": "0.0.0.0",

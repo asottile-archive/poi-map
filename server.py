@@ -1,12 +1,14 @@
 import collections
 import functools
 import json
+import string
 
 import markupsafe
 import flask
 from geopy.geocoders import GoogleV3
 
 
+LABELS = string.digits + string.ascii_uppercase + string.ascii_lowercase
 Location = collections.namedtuple('Location', ('lat', 'lng', 'name'))
 
 
@@ -29,6 +31,8 @@ def get_config():
 @functools.lru_cache(maxsize=128)
 def geocode(location):
     loc = GoogleV3().geocode(location)
+    if loc is None:
+        raise AssertionError('Could not geocode {}'.format(location))
     return Location(loc.latitude, loc.longitude, location)
 
 
@@ -48,10 +52,12 @@ def fullmap():
     return flask.render_template(
         'map.html',
         key=config.gmaps_key,
+        labels=LABELS,
         locations=locations,
         js_globals={
             'origin_lat': origin.lat,
             'origin_lng': origin.lng,
+            'labels': LABELS,
             'locations': [loc.to_json() for loc in locations],
             'zoom': config.zoom,
         },

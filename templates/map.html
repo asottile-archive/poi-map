@@ -10,14 +10,13 @@
 <body>
     <div class="wrapper">
         <div class="left-bar">
-            <ol>
-                {% for loc_desc in locations %}
-                    <li>
-                        <div><strong>{{ loc_desc.loc.name }}</strong></div>
-                        {{ loc_desc.desc }}
-                    </li>
-                {% endfor %}
-            </ol>
+            {% for loc_desc in locations %}
+                <div>
+                    {{ labels[loop.index0 + 1] }}.
+                     <strong>{{ loc_desc.loc.name }}</strong>
+                </div>
+                {{ loc_desc.desc }}
+            {% endfor %}
         </div>
         <div class="map-container"><div id="fullmap"></div></div>
     </div>
