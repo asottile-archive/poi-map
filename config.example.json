@@ -28,7 +28,10 @@
             "renowned for stone masonry:  Renaissance"
         ],
         ["Santa Trinita Firenze", ""],
-        ["Piazza degli Strozzi, 50123 Firenze", "Palazzo Strozzi"]
+        ["Piazza degli Strozzi, 50123 Firenze", "Palazzo Strozzi"],
+        ["Santa Maria Maggiore Firenze", ""],
+        ["Via S. Margherita, 1, 50122 Firenze", "Museo Casa di Dante - possible – dedicated to Dante"],
+        ["Piazza del Duomo, Firenze", "Cathedral of Santa Maria del Fiore -- beautiful dome – largest brick dome , paintings"]
     ],
     "gmaps_key": "...",
     "host": "0.0.0.0",

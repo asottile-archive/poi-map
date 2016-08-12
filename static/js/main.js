@@ -1,16 +1,32 @@
 (function () {
+    var leftBar = document.querySelector('.left-bar');
+
     function makeMarker(map, i, location) {
-        var marker = new google.maps.Marker({
+        var listItem, label, labelText, marker = new google.maps.Marker({
                 position: new google.maps.LatLng(location.lat, location.lng),
                 map: map,
                 label: window.CONFIG.labels[i + 1]
             }),
             infoWindow = new google.maps.InfoWindow({
                 content: location.name + ' - ' + location.desc,
-            });
-        marker.addListener(
-            'click', infoWindow.open.bind(infoWindow, map, marker)
-        );
+            }),
+            showWindow = infoWindow.open.bind(infoWindow, map, marker);
+        marker.addListener('click', showWindow);
+
+        labelText = document.createElement('strong');
+        labelText.textContent = [
+            window.CONFIG.labels[i + 1], '. ', location.name
+        ].join('');
+        labelText.addEventListener('click', showWindow);
+
+        label = document.createElement('div');
+        label.appendChild(labelText);
+
+        listItem = document.createElement('div');
+        listItem.appendChild(label);
+        listItem.appendChild(document.createTextNode(location.desc));
+
+        leftBar.appendChild(listItem);
     }
 
     function createMap() {

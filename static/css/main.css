@@ -18,6 +18,16 @@ html, body {
 .left-bar {
     flex-shrink: 1;
     padding: .5em;
+    width: 20em;
+    overflow-y: scroll;
+}
+
+.left-bar div {
+    margin-top: .5em;
+}
+
+.left-bar strong {
+    cursor: pointer;
 }
 
 .map-container {

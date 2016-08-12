@@ -9,15 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="left-bar">
-            {% for loc_desc in locations %}
-                <div>
-                    {{ labels[loop.index0 + 1] }}.
-                     <strong>{{ loc_desc.loc.name }}</strong>
-                </div>
-                {{ loc_desc.desc }}
-            {% endfor %}
-        </div>
+        <div class="left-bar"></div>
         <div class="map-container"><div id="fullmap"></div></div>
     </div>
     <script>window.CONFIG = {{ js_globals | tojson }}; {{ js }}</script>
