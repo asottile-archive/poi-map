@@ -6,7 +6,7 @@ What this thing does:
   I'll add walking paths at some point in the future! no promises!).
 
 Things you'll need beforehand:
-- A google maps api key.  You can create one [here] [1].
+- A google maps api key.  You can create one [here][1].
 - A starting point (such as your hotel location) and a list of points of
   interest.
 
