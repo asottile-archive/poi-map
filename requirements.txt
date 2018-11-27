@@ -5,4 +5,4 @@ geopy
 markupsafe
 pgctl==2.0.0
 pytest
-requests==2.10.0
+requests
